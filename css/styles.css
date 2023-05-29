@@ -177,6 +177,7 @@ header .contact {
   margin: 0;
 }
 .introduction-text li {
+  display: block;
   max-width: 270px;
   font-weight: 700;
   font-size: 14px;
@@ -184,6 +185,23 @@ header .contact {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-color);
+}
+
+.introduction-text.list .icon-container {
+  background-color: var(--main-background-color);
+  border-radius: 4px;
+  width: 270px;
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+
+.introduction-text.list .icon {
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
 }
 
 .text {
@@ -248,7 +266,7 @@ header .contact {
   margin: 0;
 }
 
-.pictures.list img {
+figure img {
   display: block;
 }
 
@@ -324,6 +342,42 @@ header .contact {
   color: var(--secondary-color);
 }
 
+.social-media-icons.list {
+  margin-top: 16px;
+}
+
+.social-media-icons li {
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 5px;
+  padding: 12px;
+  border-radius: 50%;
+  fill: #afb1b8;
+}
+
+.social-media-icons .icon {
+  --icon-color: currentColor;
+}
+
+.social-media-icons li:hover,
+.social-media-icons li:focus {
+  background-color: var(--selection-color);
+  fill: #fff;
+}
+
+.logos.list li {
+  display: inline-block;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+}
+
+.logos.list .icon {
+  display: block;
+  fill: #afb1b8;
+}
+
 .address {
   color: #fff;
   font-style: normal;
@@ -356,4 +410,30 @@ footer {
 footer .logo {
   display: inline-block;
   margin-bottom: 20px;
+}
+
+footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-social-media {
+  margin-left: 70px;
+}
+
+.footer-social-media p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-social-media .icon {
+  fill: #fff;
+}
+
+footer .social-media-icons.list {
+  margin-top: 20px;
 }
