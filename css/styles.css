@@ -110,6 +110,8 @@ header .container {
 }
 
 header .contact {
+  display: flex;
+  align-items: flex-end;
   text-decoration: none;
   font-size: 14px;
   color: var(--secondary-color);
@@ -118,22 +120,24 @@ header .contact {
   line-height: 1.14;
 }
 
-.contacts .email {
-  margin-right: 50px;
-}
-
-.navigation-logo .contact {
+header .contacts {
   display: flex;
-  align-items: flex-end;
-  color: inherit;
-  fill: var(--secondary-color);
 }
 
-.navigation-logo .icon {
-  --icon-color: currentColor;
-  display: inline-block;
-  line-height: 0;
+.contacts .email {
+  margin-right: 30px;
+}
+
+header .icon {
+  /* --icon-color: currentColor; */
+  fill: var(--secondary-color);
   margin-right: 10px;
+  line-height: 0;
+}
+
+header .contacts a:hover .icon,
+header .contacts a:focus .icon {
+  fill: var(--selection-color);
 }
 
 .main-headline .button {
@@ -383,7 +387,7 @@ figure img {
 }
 
 .social-media-icons .icon {
-  --icon-color: currentColor;
+  /* --icon-color: currentColor; */
 }
 
 .social-media-icons li:hover,
@@ -463,6 +467,10 @@ footer .container {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.footer-social-media li {
+  background-color: #ffffff1a;
 }
 
 .footer-social-media .icon {
