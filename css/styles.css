@@ -80,7 +80,15 @@ footer a.logo {
 }
 .main-headline {
   background-color: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/background-img.jpg");
+  background-size: cover;
+  background-position: center;
   width: 1600px;
+  padding: 200px 0;
   margin: 0 auto;
 }
 
@@ -114,6 +122,20 @@ header .contact {
   margin-right: 50px;
 }
 
+.navigation-logo .contact {
+  display: flex;
+  align-items: flex-end;
+  color: inherit;
+  fill: var(--secondary-color);
+}
+
+.navigation-logo .icon {
+  --icon-color: currentColor;
+  display: inline-block;
+  line-height: 0;
+  margin-right: 10px;
+}
+
 .main-headline .button {
   font-weight: 700;
   font-size: 16px;
@@ -143,14 +165,12 @@ header .contact {
 .button:hover {
   background-color: var(--selection-color);
   color: #fff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .headline {
   margin: 0;
-}
-
-.main-headline {
-  padding: 200px 0;
 }
 
 .main-headline .headline {
@@ -244,6 +264,13 @@ p {
 
 .pictures.list li {
   margin: 15px;
+}
+
+.pictures.list li:hover,
+.pictures.list li:focus {
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .pictures.list li:nth-child(-n + 3) {
@@ -370,12 +397,20 @@ figure img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 170px;
-  height: 92px;
+  fill: #afb1b8;
+  padding: 16px 32px;
 }
 
 .logos.list .icon {
+  --icon-color: currentColor;
   display: block;
-  fill: #afb1b8;
+}
+
+.logos.list li:hover,
+.logos.list li:focus {
+  fill: var(--selection-color);
+  border-color: var(--selection-color);
+  cursor: pointer;
 }
 
 .address {
